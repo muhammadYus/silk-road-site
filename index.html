@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Шёлковый путь — путешествие по Узбекистану</title>
+  <meta name="description" content="Маршруты по Самарканду, Бухаре, Хиве и Ташкенту: история, сезоны, планировщик поездки.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="nav" id="nav">
+    <a class="logo" href="#top"><span class="logo-mark">◈</span> Шёлковый путь</a>
+    <nav class="nav-links">
+      <a href="#cities">Города</a>
+      <a href="#history">История</a>
+      <a href="#seasons">Сезоны</a>
+      <a href="#plan" class="btn btn-small">Спланировать</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </header>
+
+  <!-- Первый экран -->
+  <section class="hero" id="top">
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <p class="eyebrow reveal">Самарканд · Бухара · Хива · Ташкент</p>
+      <h1 class="reveal">Там, где караваны <em>встречали&nbsp;звёзды</em></h1>
+      <p class="lead reveal">Двадцать пять веков торговли, науки и изразцовой лазури — на одном маршруте длиной около&nbsp;1&nbsp;000&nbsp;километров.</p>
+      <div class="hero-cta reveal">
+        <a href="#cities" class="btn">Выбрать город</a>
+        <a href="#plan" class="btn btn-ghost">Собрать маршрут →</a>
+      </div>
+    </div>
+
+    <!-- Силуэт города -->
+    <svg class="skyline" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky-fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#14203d"/>
+          <stop offset="1" stop-color="#0b1120"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#sky-fill)" d="M0 260V190h90v-30h20v30h60v-60h10l4-70h8l4 70h10v60h70v-40c0-45 40-75 80-75s80 30 80 75v40h40v-80h14l6-90h10l6 90h14v80h50v-30h120v-20c0-40 30-65 65-65s65 25 65 65v20h60v-50h12l5-80h8l5 80h12v50h80v-40c0-35 30-60 60-60s60 25 60 60v40h70v-100h16l6-60h10l6 60h16v100h90v-20h60v40h60V260Z"/>
+    </svg>
+  </section>
+
+  <!-- Города -->
+  <section class="section" id="cities">
+    <div class="section-head reveal">
+      <p class="eyebrow">Четыре жемчужины</p>
+      <h2>Города маршрута</h2>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal" style="--c1:#1e6fa8;--c2:#0f3b66">
+        <div class="card-art"><div class="pattern"></div><span class="card-days">3 дня</span></div>
+        <div class="card-body">
+          <h3>Самарканд</h3>
+          <p>Регистан, Шахи-Зинда и обсерватория Улугбека. Город, где голубой цвет стал архитектурой.</p>
+          <ul class="tags"><li>Регистан</li><li>Гур-Эмир</li><li>Сиаб</li></ul>
+        </div>
+      </article>
+
+      <article class="card reveal" style="--c1:#c98a2b;--c2:#7a4a12">
+        <div class="card-art"><div class="pattern"></div><span class="card-days">2–3 дня</span></div>
+        <div class="card-body">
+          <h3>Бухара</h3>
+          <p>Живой средневековый центр: торговые купола, Ляби-Хауз и минарет Калян, переживший Чингисхана.</p>
+          <ul class="tags"><li>Пои-Калян</li><li>Арк</li><li>Ляби-Хауз</li></ul>
+        </div>
+      </article>
+
+      <article class="card reveal" style="--c1:#b5563a;--c2:#5e2417">
+        <div class="card-art"><div class="pattern"></div><span class="card-days">1–2 дня</span></div>
+        <div class="card-body">
+          <h3>Хива</h3>
+          <p>Город-музей внутри глиняных стен Ичан-Калы. Лучше всего — на закате, с крепостной стены.</p>
+          <ul class="tags"><li>Ичан-Кала</li><li>Кальта-Минар</li></ul>
+        </div>
+      </article>
+
+      <article class="card reveal" style="--c1:#2c9c8f;--c2:#11544c">
+        <div class="card-art"><div class="pattern"></div><span class="card-days">1–2 дня</span></div>
+        <div class="card-body">
+          <h3>Ташкент</h3>
+          <p>Столица контрастов: базар Чорсу, мозаики метро и модернизм 70-х рядом с медресе.</p>
+          <ul class="tags"><li>Чорсу</li><li>Метро</li><li>Хаст-Имам</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Цифры -->
+  <section class="stats">
+    <div class="stat reveal"><b data-count="2750">0</b><span>лет Самарканду</span></div>
+    <div class="stat reveal"><b data-count="140">0</b><span>архитектурных памятников в старой Бухаре</span></div>
+    <div class="stat reveal"><b data-count="1000">0</b><span>км дорогой от Ташкента до Хивы</span></div>
+    <div class="stat reveal"><b data-count="300">0</b><span>солнечных дней в году</span></div>
+  </section>
+
+  <!-- История -->
+  <section class="section" id="history">
+    <div class="section-head reveal">
+      <p class="eyebrow">Хронология</p>
+      <h2>Коротко о большой истории</h2>
+    </div>
+
+    <ol class="timeline">
+      <li class="reveal"><time>VIII в. до н. э.</time><div><h4>Мараканда</h4><p>Основан город, который греки позже назовут столицей Согдианы.</p></div></li>
+      <li class="reveal"><time>II в. до н. э.</time><div><h4>Рождение Шёлкового пути</h4><p>Караванные дороги связывают Китай со Средиземноморьем через оазисы Мавераннахра.</p></div></li>
+      <li class="reveal"><time>IX–X вв.</time><div><h4>Золотой век науки</h4><p>Аль-Хорезми, Ибн Сина и аль-Бируни работают в городах региона.</p></div></li>
+      <li class="reveal"><time>XIV–XV вв.</time><div><h4>Эпоха Тимуридов</h4><p>Самарканд становится столицей империи, Улугбек строит обсерваторию.</p></div></li>
+      <li class="reveal"><time>1991</time><div><h4>Независимость</h4><p>Узбекистан — независимое государство; исторические центры открыты путешественникам.</p></div></li>
+    </ol>
+  </section>
+
+  <!-- Сезоны -->
+  <section class="section section-alt" id="seasons">
+    <div class="section-head reveal">
+      <p class="eyebrow">Когда ехать</p>
+      <h2>Выберите сезон</h2>
+    </div>
+
+    <div class="tabs reveal" role="tablist">
+      <button class="tab active" data-season="spring">Весна</button>
+      <button class="tab" data-season="summer">Лето</button>
+      <button class="tab" data-season="autumn">Осень</button>
+      <button class="tab" data-season="winter">Зима</button>
+    </div>
+
+    <div class="season-panel reveal" id="season-panel"></div>
+  </section>
+
+  <!-- Планировщик -->
+  <section class="section" id="plan">
+    <div class="plan reveal">
+      <div class="plan-text">
+        <p class="eyebrow">Планировщик</p>
+        <h2>Соберите свой маршрут</h2>
+        <p>Отметьте города — посчитаем, сколько дней заложить на поездку.</p>
+      </div>
+
+      <form class="plan-form" id="plan-form">
+        <label class="check"><input type="checkbox" value="3" data-name="Самарканд" checked><span>Самарканд <small>3 дня</small></span></label>
+        <label class="check"><input type="checkbox" value="3" data-name="Бухара" checked><span>Бухара <small>3 дня</small></span></label>
+        <label class="check"><input type="checkbox" value="2" data-name="Хива"><span>Хива <small>2 дня</small></span></label>
+        <label class="check"><input type="checkbox" value="2" data-name="Ташкент"><span>Ташкент <small>2 дня</small></span></label>
+
+        <div class="plan-result">
+          <div><span class="muted">Итого</span><b id="plan-days">6</b><span class="muted">дней</span></div>
+          <p id="plan-route">Самарканд → Бухара</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p><span class="logo-mark">◈</span> Шёлковый путь · учебный проект, 2026</p>
+    <a href="#top">Наверх ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
